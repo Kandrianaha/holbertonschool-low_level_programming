@@ -1,9 +1,17 @@
 #include <stdio.h>
-
-int main()
+/**
+ * maing - Entry point
+ * Return: Always 0
+ */
+int main(void)
 {
-	char ch = 'a';
-	putchar(ch);
+	char letter;
+
+	for (letter = 'a'; letter <= 'z'; letter++)
+{
+	putchar(letter);
+}
+putchar('\n');
 
 	return (0);
 }
