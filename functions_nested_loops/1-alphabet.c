@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * print_alphabet
- * Retunr: void
+ * print_alphabet - prints a-z in lowercase followed by newline
+ *
+ * Return: void
  */
 void print_alphabet(void)
 {
