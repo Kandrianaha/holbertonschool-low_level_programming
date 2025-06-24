@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_numbers - prints numbers from £0 to 
+ *print_numbers - prints numbers from £0 t 9
  */
 void print_numbers(void)
 {
