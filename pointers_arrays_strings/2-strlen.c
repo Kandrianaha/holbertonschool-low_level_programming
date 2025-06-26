@@ -1,10 +1,15 @@
 #include "main.h"
 /**
- * reset_to_98 - updates the value of the int it points to
- * @n: pointer to an int
- * Retunr: void
+ * _strlen - function that returns the length of a string
+ * @s: string
+ * Return: length of a string;
  */
-void reset_to_98(int *n)
+int _strlen(char *s)
 {
-	*n = 98;
+	int count, inc;
+	inc = 0;
+	for (count = 0; s[count] != '\0'; count++)
+		inc++;
+
+	return (inc);
 }
