@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * print_array - prints n elements of an array
- * @a: array 
+ * @a: array
  * @n: number of elements to print
  */
 void print_array(int *a, int n)
