@@ -1,7 +1,8 @@
 #include "main.h"
-/** _atoi - converts a string to an integer
- * @s: string to convert
- * Return: integer converted to a string
+/**
+ *_atoi - converts a string to an integer
+ *@s: string to convert
+ *Return: integer converted from string
  */
 int _atoi(char *s)
 {
@@ -13,9 +14,8 @@ int _atoi(char *s)
 
 	while (s[count] != '\0')
 	{
-		c = s[count];
-
-	if (c >= '0' && c <= '9')	
+	c = s[count];
+	if (c >= '0' && c <= '9')
 	{
 	evalnum = 1;
 	finalnum = (finalnum * 10) + (c - '0');
