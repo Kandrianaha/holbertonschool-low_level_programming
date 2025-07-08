@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * is_prime_helper - checks if a n is prime
- * @n: number 
+ * @n: number
  * @i: divisor
  * Return: 1 if prime, 0 otherwise
  */
