@@ -53,7 +53,7 @@ return (copy);
 
 /**
 * new_dog - creates a new dog
-* @name of dog
+* @name: name of dog
 * @age: age of dog
 * @owner: owner's name
 * Return: pointer to new dog, NULL if failed
