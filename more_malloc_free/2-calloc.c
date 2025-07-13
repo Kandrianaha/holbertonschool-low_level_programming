@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * calloc - allocates memory for an array of elements
+ * _calloc - allocates memory for an array of elements
  * @nmemb: number of elements in the array
  * @size: size of each elements in bytes
  * Return: pointer to the allocated memory, NULL if failed.
