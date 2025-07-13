@@ -3,7 +3,7 @@
 
 /**
 * _strcpy - copies a string
-* @dest: destination 
+* @dest: destination
 * @src: source string
 * Return: pointer to dest
 */
@@ -69,10 +69,10 @@ return (NULL);
 d->name = _strdup(name);
 if (d->name == NULL)
 {
-free (d);
+free(d);
 return (NULL);
 }
-d->owner= _strdup(owner);
+d->owner =  _strdup(owner);
 if (d->owner == NULL)
 {
 free(d->name);
@@ -82,5 +82,5 @@ return (NULL);
 
 d->age = age;
 
-return(d);
+return (d);
 }
