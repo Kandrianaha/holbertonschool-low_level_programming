@@ -71,7 +71,7 @@ if (d->name == NULL)
 {
 free (d);
 return (NULL);
-
+}
 d->owner= _strdup(owner);
 if (d->owner == NULL)
 {
@@ -81,6 +81,6 @@ return (NULL);
 }
 
 d->age = age;
-}
+
 return(d);
 }
