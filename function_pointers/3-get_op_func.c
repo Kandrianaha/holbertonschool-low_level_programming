@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "3-calc.h"
 
 /**
@@ -21,14 +22,15 @@ int i;
 
 i = 0;
 
-while (*ops[i].op != NULL && *(ops[i].op) != *s)
-	i++;
+while (*ops[i].op != *s)
+{
+	i = i + 1;
 
 if (i > 4 || s[1] != '\0')
 {
 	printf("Error\n");
 	exit(99);
 }
-
+}
 return (ops[i].f);
 }
