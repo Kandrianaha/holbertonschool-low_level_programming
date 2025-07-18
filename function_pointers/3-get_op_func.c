@@ -2,11 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "3-calc.h"
-
 /**
- * get_op_func - declares the function
- * @s: the operator passed as argument
- * Return : pointer to function
+ * get_op_func - call the function performing the operation
+ * @s: operator passed in
+ * Return: pointer to function
  */
 int (*get_op_func(char *s))(int, int)
 {
