@@ -4,11 +4,11 @@
 
 /**
  * print_all - prints anything
- * @format: list of arguments passed to the function
- * @c: char
- * @i: int
- * @f: float
- * @s: string
+ * @format: list of arguments passed to the function:
+ * 'c' for char
+ * 'i' for int
+ * 'f' for float
+ * 's' for string
  */
 void print_all(const char * const format, ...)
 {
