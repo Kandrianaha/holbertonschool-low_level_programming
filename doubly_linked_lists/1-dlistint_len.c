@@ -4,7 +4,7 @@
 /**
  * dlistint_len - returns the number of elements in q dlistint_t list
  * @h: pointer to the head of the dlistint_t list
- * Retunr: Number of nodes in the list
+ * Return: Number of nodes in the list
  */
 size_t dlistint_len(const dlistint_t *h)
 {
