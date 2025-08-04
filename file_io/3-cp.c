@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	while ((r_len = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		w_len = write(fd_to, buffer, r_len);
-		if (w_len != r_len)
+		if (w_len == -1 || w_len != r_len)
 		{
 			close(fd_from);
 			close(fd_to);
