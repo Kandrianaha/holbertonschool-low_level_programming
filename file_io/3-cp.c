@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <stdarg.h>
 
 #define BUFFER_SIZE 1024
 
@@ -12,9 +13,12 @@
  * @format: error message format
  * @arg: argument to print in message
  */
-void error_exit(int code, const char *format, const char *arg)
+void error_exit(int code, const char *format, ...)
 {
-	dprintf(STDERR_FILENO, format, arg);
+	va_list args;
+	va_start(args, format);
+	vdprintf(STDERR_FILENO, format, args);
+	va_end(args);
 	exit(code);
 }
 
@@ -61,10 +65,10 @@ int main(int argc, char *argv[])
 	}
 
 	if (close(fd_from) == -1)
-		error_exit(100, "Error: Can't close fd %d\n", argv[1]);
+		error_exit(100, "Error: Can't close fd %d\n", fd_from);
 
 	if (close(fd_to) == -1)
-		error_exit(100, "Error: Can't close fd %d\n", argv[2]);
+		error_exit(100, "Error: Can't close fd %d\n", fd_to);
 
 	return (0);
 }
