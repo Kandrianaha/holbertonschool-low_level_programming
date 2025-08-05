@@ -13,12 +13,9 @@
  * @format: error message format
  * @arg: argument to print in message
  */
-void error_exit(int code, const char *format, ...)
+void error_exit(int code, const char *format, const char *arg)
 {
-	va_list args;
-	va_start(args, format);
-	vfprintf(stderr, format, args);
-	va_end(args);
+	dprintf(STDERR_FILENO, format, arg);
 	exit(code);
 }
 
@@ -65,10 +62,16 @@ int main(int argc, char *argv[])
 	}
 
 	if (close(fd_from) == -1)
-		error_exit(100, "Error: Can't close fd %d\n", fd_from);
+	{
+		dprintf(100, "Error: Can't close fd %d\n", fd_from);
+		exit(100);
+	}
 
 	if (close(fd_to) == -1)
-		error_exit(100, "Error: Can't close fd %d\n", fd_to);
+	{
+		dprintf(100, "Error: Can't close fd %d\n", fd_to);
+		exit(100);
+	}
 
 	return (0);
 }
